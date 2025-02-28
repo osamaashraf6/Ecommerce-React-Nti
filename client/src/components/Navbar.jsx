@@ -105,7 +105,7 @@ const Navbar = () => {
                   <FontAwesomeIcon icon={faSearch} className="text-sm" />
                 </button>
               </div>
-              {currentUser?.data?.role === "user" && (
+              {currentUser && currentUser?.data?.role === "user" && (
                 <div className="flex gap-5 items-center">
                   <div className="relative">
                     <button
