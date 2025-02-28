@@ -1,0 +1,24 @@
+import React from "react";
+import Lottie from "react-lottie";
+import animationData from "../assets/lotti/noitems.json";
+const NoItems = () => {
+  const defaultOptions = {
+    loop: true,
+    autoplay: true,
+    animationData: animationData,
+    rendererSettings: {
+      preserveAspectRatio: "xMidYMid slice",
+    },
+  };
+  return (
+    <>
+      <div className=" grid place-items-center bg-white">
+        <div className="w-96 h-96">
+          <Lottie options={defaultOptions} />
+        </div>
+      </div>
+    </>
+  );
+};
+
+export default NoItems;
