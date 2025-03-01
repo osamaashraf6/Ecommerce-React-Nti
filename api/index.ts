@@ -52,7 +52,7 @@ app.use(
     origin: [
       "http://localhost:4200",
       "http://localhost:3000",
-      "https://ecommerce-mern-phi-three.vercel.app",
+      "https://ecommerce-mern-lac.vercel.app",
     ],
     methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
     allowedHeaders: [
