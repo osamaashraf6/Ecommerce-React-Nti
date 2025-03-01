@@ -139,7 +139,7 @@ const ProductSectionOne = ({ isPending, product }) => {
                   <button className="w-[35px] h-[38px] bg-gray-200 font-medium flex justify-center items-center">
                     -
                   </button>
-                  <span>0</span>
+                  <span>1</span>
                   <button className="w-[35px] h-[38px] bg-gray-200 font-medium flex justify-center items-center">
                     +
                   </button>

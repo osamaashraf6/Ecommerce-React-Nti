@@ -48,8 +48,8 @@ const useProductLogic = () => {
     search,
     categoryId: listAll || subcategory ? "" : category, //! very important
     subcategoryId: listAll ? "" : subcategory,
-    color: listAll ? "" : color,
-    size: listAll ? "" : size,
+    color:  color,
+    size:  size,
   });
   const { isPending: categoryLoading, data: categoryList } = useCategory({});
   const { useGetAllSubCategoryQuery } = useSubCategory();
