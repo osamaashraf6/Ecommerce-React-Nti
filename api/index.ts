@@ -6,10 +6,10 @@ import { app } from "./config";
 import GlobalError from "./middelwares/GlobalError";
 import ApiError from "./utils/ApiError";
 // Imported Passport
-// import { pasrt } from "./utils/Passport";
-// import passport from "passport";
-// import session from "express-session";
-// import cookieSession from "cookie-session";
+import { pasrt } from "./utils/Passport";
+import passport from "passport";
+import session from "express-session";
+import cookieSession from "cookie-session";
 // Imported Security
 import cors from "cors";
 import cookieParser from "cookie-parser";
@@ -87,18 +87,18 @@ app.use(express.static("uploads"));
 // http://localhost:5000/products/product-1726081638657-coverimg.webp if you want to open the img from the browser.
 
 // Passport
-// pasrt();
-// app.use(
-//   session({
-//     secret: "duhasudhusad", // You should replace this with a strong, random secret
-//     resave: false, // Avoid resaving session if it hasn't been modified
-//     saveUninitialized: false, // Don't save uninitialized sessions
-//     cookie: { secure: false }, // Set to true if you're using HTTPS
-//   })
-// );
+pasrt();
+app.use(
+  session({
+    secret: "duhasudhusad", // You should replace this with a strong, random secret
+    resave: false, // Avoid resaving session if it hasn't been modified
+    saveUninitialized: false, // Don't save uninitialized sessions
+    cookie: { secure: false }, // Set to true if you're using HTTPS
+  })
+);
 
-// app.use(passport.initialize());
-// app.use(passport.session());
+app.use(passport.initialize());
+app.use(passport.session());
 
 // Routes
 const mountRoutes = (app: express.Application) => {
