@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import useCategory from "../categoryHook";
 import useSubCategory from "../subcategoryHook";
 import { useParams, useSearchParams } from "react-router-dom";
@@ -7,7 +7,9 @@ const useProductLogic = () => {
   const [searchParams] = useSearchParams();
   const subcategoryName = searchParams.get("subcategoryname");
   const catId = searchParams.get("categoryId");
-  const { subcatId } = useParams();
+  const { subcategoryId } = useParams();
+  // useEffect(() => {
+  // }, [subcatId]);
   const dropItems = [
     { id: 1, name: "one" },
     { id: 2, name: "two" },
@@ -33,7 +35,7 @@ const useProductLogic = () => {
   const [search, setSearch] = useState("");
   const [category, setCategory] = useState(catId);
   // const [category, setCategory] = useState("");
-  const [subcategory, setSubCategory] = useState(subcatId);
+  const [subcategory, setSubCategory] = useState(subcategoryId);
   const [listAll, setListAll] = useState(false);
   const [show, setShow] = useState("three");
   const [color, setColor] = useState("");
@@ -97,7 +99,7 @@ const useProductLogic = () => {
   const resetItems = () => {
     setSearch("");
     setCategory(catId);
-    setSubCategory(subcatId);
+    setSubCategory(subcategoryId);
     setListAll(false);
     setShow("three");
     setColor("");
