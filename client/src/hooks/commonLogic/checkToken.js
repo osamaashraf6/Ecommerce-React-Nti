@@ -10,7 +10,7 @@ const useCheckToken = () => {
   useEffect(() => {
     const handleLogOut = () => {
       logout(dispatch);
-      toast.success("Signed Out Successfully");
+      toast.success("Session terminated, Sign in again please");
     };
 
     const token = JSON.parse(localStorage.getItem("persist:root"))?.user;
